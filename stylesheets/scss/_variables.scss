@@ -1,0 +1,41 @@
+
+/*******************************************************************
+Variables in a sass partial, include in all relevant files using @import. To learn more about using SASS/SCSS see - http://sass-lang.com/tutorial.html
+*******************************************************************/
+
+// 16 grids at 6.25% per grid
+$grid1: 6.25%;
+$grid2: 12.5%;
+$grid3: 18.75%;
+$grid4: 25%;
+$grid5: 31.25%;
+$grid6: 37.5%;
+$grid7: 43.75%;
+$grid8: 50%;
+$grid9: 56.25%;
+$grid10: 62.5%;
+$grid11: 68.75%;
+$grid12: 75%;
+$grid13: 81.25%;
+$grid14: 87.5%;
+$grid15: 93.75%;
+$grid16: 100%;
+
+/* variables */
+$desktop-width: 1000px;
+$fluid-width: 100%;
+$auto-margin: 0 auto;
+$half-margin: 0 $grid1 / 2;
+$vert-margin: 40px;
+$half-padding: 0 $grid1 / 2;
+$large-width: $grid16;
+$medium-width: $grid10;
+$small-width: $grid4;
+$header-background-color: rgba(52, 73, 94,1.0);
+$header-height: 60px;
+$footer-background-color: rgba(52, 73, 94,1.0);
+$footer-height: 120px;
+$background-color: rgba(236, 240, 241,1.0);
+$debug: 2px solid orange;
+$nav-link-color: rgba(216,224,233,1.0);
+$link-color: blue;

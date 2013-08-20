@@ -1,0 +1,130 @@
+<!DOCTYPE HTML>
+
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="shortcut icon" href="/favicon.png">
+		<title>ASFramework - Responsive SASS grid with media queries</title>
+
+		<link rel="stylesheet" type="text/css" href="stylesheets/min-css/normalize-min.css" media="screen"> 
+		<!-- Normalize.css - CSS Reset-->
+		<link rel="stylesheet" type="text/css" href="stylesheets/css/responsivegrid.css" media="screen"> 
+		<!-- ASFramework - responsive layout and plugin styles -->
+		<link rel="stylesheet" type="text/css" href="stylesheets/css/styles.css" media="screen">
+		<!-- Add your styles here -->
+		<!--[if IE 8]> <link rel="stylesheet" type="text/css" href="stylesheets/css/ie8.css" media="screen"> <![endif] --> 
+		<!-- Add IE8 Styles here -->
+
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script> 
+		<!-- Jquery via Google CDN - // inherits the current protocol (http or https) -->
+		<script>!window.jQuery && document.write(unescape('%3Cscript src="js/plugins/jquery-2.0.2.min.js"%3E%3C/script%3E'))</script> 
+		<!-- Jquery - local fallback -->
+		<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script> 
+		<!-- JqueryUI via Google CDN - User Interaction library -->
+		<script type="text/javascript">!window.jQuery.ui && document.write(unescape('%3Cscript src="js/plugins/jquery-ui-1.10.3.custom/js/jquery-ui-1.10.3.custom.min.js"%3E%3C/script%3E'))</script><!-- JqueryUI - local fallback -->
+		<script type="text/javascript" src="js/plugins/jquery.jpanelmenu.min.js"></script> 
+		<!-- Jpanelmenu - Enables an off panel menu for mobile/tablets -->	
+		<script type="text/javascript" src="js/plugins/FitVids.js/jquery.fitvids.js"></script>
+		<script>
+		  $(document).ready(function(){
+		    // Target your .container, .wrapper, .post, etc.
+		    $(".video-container").fitVids();
+		  });
+		</script> 
+		<!-- Fitvid.js - Responsive video embeds when wrapped in the target element -->
+		<script type="text/javascript" src="js/plugins/ResponsiveSlides.js/responsiveslides.min.js"></script>
+		<script>
+		  $(function() {
+		    $(".rslides").responsiveSlides();
+		  });
+		</script> 
+		<!-- Responsiveslides.js - lightweight, responsive & customizable image slider -->
+		<script type="text/javascript" src="js/plugins/jQuery-Retina-Display-Plugin/jquery.retina.js"></script>
+		<script type="text/javascript">
+		    $(document).ready(function() {
+		        $('img').retina('@2x');
+		    });
+		</script>
+		<!-- Jquery Retina - Swaps in high def images tagged with the @2x convention -->
+		<script type="text/javascript" src="js/scripts/concatenated-scripts.js"></script> 
+		<!-- Concatenated Scripts - Delete if not needed, smaller scripts concatenated to save http requests. Currently contains smooth scrolling plugin -->		
+		<script type="text/javascript" src="js/plugins/modernizr.custom.02671.js"></script>
+		<!-- Modernizr - Browser feature detection -->
+		<script type="text/javascript" src="js/plugins/webshims-stable/js-webshim/minified/polyfiller.js"></script> 
+		<script>
+			/*Option A - load only specific features you need. Ex $.webshims.polyfill('forms json-storage');*/
+			$.webshims.polyfill('none');
+			/*Option B - load all unsupported features. Ex $.webshims.polyfill(); call polyfill before DOM-Ready to implement everything as soon & fast as possible*/
+		</script> 
+		<!-- Webshim - Polyfill's features missing from older browsers -->
+	</head> <!-- end of head -->
+
+	<body>
+		<div id="wrapper">
+			<div class="header">
+				<img src="/images/site/mobile-menu-icon.png" height="50px" width="50px" class="mobile-nav-trigger" title="Mobile Menu">
+				<div>
+				 	<ul id="nav">
+						<li><a href="#about" title="About ASFramework">About</a></li>
+						<li><a href="#slideshows" title="View responsive slideshows example">Slideshow</a></li>
+						<li><a href="#images" title="View responsive images example">Images</a></li>
+						<li><a href="#videos" title="View responsive videos example">Video</a></li>
+						<li><a href="#download" title="Download ASFramework">Download</a></li>
+					</ul>
+				</div><!-- 
+				--><span class="project-name"><a href="/mis-hit" title="Homepage">ASFramework</a></span>	
+			</div><!-- end of header -->
+
+			<div class="content">
+				<h1 id="about">About</h1>
+				<p>
+					ASFramwork is a lightweight responsive framework featuring all the basic plugins and functionality you will need. ASFramework will be released as a html site as well ported into themes for MVC platforms such as Opencart, Codeigniter and wordpress. This project started out as an experiment with SASS and media queries and has snowballed. ASFramwork is a lightweight responsive framework featuring all the basic plugins and functionality you will need. ASFramework will be released as a html site as well ported into themes for MVC platforms such as Opencart, Codeigniter and wordpress. This project started out as an experiment with SASS and media queries and has snowballed.
+				</p>
+				<h1 id="slideshows">Responsive Slides</h1>
+				<div class="custom-slider-sizing">
+					<ul class="rslides">
+					  <li><img src="images/site/slide-1-opt.png" width="600" height="300" alt="Responsiveslide.js example"></li>
+					  <li><img src="images/site/slide-2-opt.png" width="600" height="300" alt="Responsiveslide.js example"></li>
+					  <li><img src="images/site/slide-3-opt.png" width="600" height="300" alt="Responsiveslide.js example"></li>
+					</ul>
+				</div>
+				<p>
+					Responsive image slider. where possible also specify your image dimensions on the html tag as it improves load time, this can be done in percentages. Intro text here We’ll start out by creating a very simple SCSS file. Since SCSS is an extension of CSS3, our first file will start out as plain CSS. Open up a new file called style.scss. We’ll start out by creating a very simple SCSS file. Since SCSS is an extension of CSS3, our first file will start out as plain CSS. Open up a new file called style.scss. We’ll start out by creating a very simple SCSS file. Since SCSS is an extension of CSS3, our first file will start out as plain CSS. Open up a new file called style.scss
+				</p>
+				<h1 id="images">Responsive/retina Images</h1>
+				<img class="custom-image-sizing" src="images/site/demo-image-opt.png" alt="Responsive image example">
+				<p>
+					Responsive images by default. If you have a retina device the image above is black, if not its grey. All images have retina support (including those in the slider above.) just create a @2x copy (imagename@2x.jpg) and place it in the same folder. Intro text here We’ll start out by creating a very simple SCSS file. Since SCSS is an extension of CSS3, our first file will start out as plain CSS. Open up a new file called style.scss. We’ll start out by creating a very simple SCSS file. Since SCSS is an extension of CSS3, our first file will start out as plain CSS. Open up a new file called style.scss. We’ll start out by creating a very simple SCSS file. Since SCSS is an extension of CSS3, our first file will start out as plain CSS. Open up a new file called style.scss
+				</p>	
+				<h1 id="videos">Responsive Videos</h1>				
+				<div class="custom-video-sizing">
+					<div class="video-container">
+						<iframe width="560" height="315" src="http://www.youtube.com/embed/BickMFHAZR0?list=EC16649CCE7EFA8B2F" frameborder="0" allowfullscreen></iframe>
+					</div>
+				</div>
+				<p>
+					Responsive videos by default (youtube, vimeo, vip.tv, kickstarter) Intro text here We’ll start out by creating a very simple SCSS file. Since SCSS is an extension of CSS3, our first file will start out as plain CSS. Open up a new file called style.scss. We’ll start out by creating a very simple SCSS file. Since SCSS is an extension of CSS3, our first file will start out as plain CSS. Open up a new file called style.scss. We’ll start out by creating a very simple SCSS file. Since SCSS is an extension of CSS3, our first file will start out as plain CSS. Open up a new file called style.scss
+				</p>
+				<h1 id="download">Download</h1>
+				<p>
+					ASFramwork is a lightweight responsive framework featuring all the basic plugins and functionality you will need. ASFramework will be released as a html site as well ported into themes for MVC platforms such as Opencart, Codeigniter and wordpress. This project started out as an experiment with SASS and media queries and has snowballed. ASFramwork is a lightweight responsive framework featuring all the basic plugins and functionality you will need. ASFramework will be released as a html site as well ported into themes for MVC platforms such as Opencart, Codeigniter and wordpress. This project started out as an experiment with SASS and media queries and has snowballed.
+				</p>
+				<a target="_blank" href="https://github.com/JeromeDouglas/ASFramework" class="fork-on-github"><img src="images/site/fork-on-github-green.png" height="149px" width="149px" alt="Fork me on GitHub"></a>
+			</div><!-- end of content -->
+
+			<div class="footer">
+
+			</div>	<!-- end of footer -->		
+		</div>	<!-- end of wrapper -->	
+		<script type="text/javascript">
+			var jPM = $.jPanelMenu({
+			    menu: '#nav',
+			    trigger: '.mobile-nav-trigger',
+			    keyboardShortcuts: 'false'
+			});
+			jPM.on();
+		</script> <!-- Initializes Jpanelmenu. You can set your own triggers -->	
+	</body> <!-- end of body -->
+</html> <!-- end of html -->
+   

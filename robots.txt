@@ -1,0 +1,5 @@
+# Set to disallow all indexing for testing purposes
+User-agent: *
+Disallow: /
+
+

@@ -1,0 +1,33 @@
+/*******************************************************************
+Add your IE8 styles here, conventional CSS, SCSS or SASS syntax. To learn more about using SASS/SCSS see - http://sass-lang.com/tutorial.html
+*******************************************************************/
+/******** variables imported from the _variable partial *********/
+/*******************************************************************
+Variables in a sass partial, include in all relevant files using @import. To learn more about using SASS/SCSS see - http://sass-lang.com/tutorial.html
+*******************************************************************/
+/* variables */
+/* IE8 can't use media queries, so some of the main styling from the desktop view 1000px plus have been moved here.*/
+#wrapper {
+  width: 1000px;
+  margin: 0 auto; }
+
+.header {
+  /*mobile menu trigger will not appear*/ }
+  .header .mobile-nav-trigger {
+    display: none; }
+  .header div {
+    display: inline-block;
+    width: 62.5%; }
+    .header div ul {
+      display: inline-block;
+      width: 100%;
+      /* 100% of parent div above*/
+      margin: 18px 0;
+      padding: 0; }
+      .header div ul li {
+        display: inline-block;
+        font-size: 1.25em;
+        margin-left: 3.125%;
+        list-style-type: none; }
+  .header .project-name {
+    font-size: 3em; }

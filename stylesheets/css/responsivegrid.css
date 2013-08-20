@@ -1,0 +1,264 @@
+@charset "UTF-8";
+/*******************************************************************
+ ASFramework Responsive grid system with SASS - SCSS Stylesheet
+
+Developed by Jerome Douglas of http://adaptivesites.co.uk/
+Github - github.com/JeromeDouglas
+Twitter - twitter.com/jer_moe
+E-mail - jeromedouglas@gmail.com
+Paypal - https://paypal.com/HHHHHH
+
+Paypal donations and contract work will be greatly received
+*******************************************************************/
+/******** variables imported from the _variable partial *********/
+/*******************************************************************
+Variables in a sass partial, include in all relevant files using @import. To learn more about using SASS/SCSS see - http://sass-lang.com/tutorial.html
+*******************************************************************/
+/* variables */
+/******** css fixes ********/
+/* Apply box-sizing: border-box to all elements so borders APPLY TO THE INSIDE OF THE ELEMENT and wont break the responsive grid. see http://www.paulirish.com/2012/box-sizing-border-box-ftw */
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* This project has been built WITHOUT fLOATS, floats remove an element from the flow of the page. Therefore i believe display:inline-block is a better alternative in a grid system. Inline-blocks have their issues too, they are WHITESPACE AWARE in html and you may need to vertically align elements. See designshack.net/articles/css/whats-the-deal-with-display-inline-block (floats are still useful for making text flow around images)
+ */
+/***************************************
+responsive layouts
+***************************************/
+/******** desktop view 1000px plus ********/
+@media screen and (min-width: 1000px) {
+  #wrapper {
+    width: 1000px;
+    margin: 0 auto; }
+
+  .header .mobile-nav-trigger {
+    display: none; }
+  .header div {
+    display: inline-block;
+    width: 62.5%; }
+    .header div ul {
+      display: inline-block;
+      width: 100%;
+      /* 100% of parent div above*/
+      margin: 18px 0;
+      padding: 0; }
+      .header div ul li {
+        display: inline-block;
+        font-size: 1.25em;
+        margin-left: 3.125%;
+        list-style-type: none; }
+  .header .project-name {
+    font-size: 3em;
+    width: 37.5%; } }
+/******** large tablet ********/
+@media screen and (min-width: 768px) and (max-width: 999px) {
+  #wrapper {
+    width: 100%; }
+
+  .project-name {
+    font-size: 2.5em;
+    margin: 6px 0; }
+
+  #nav {
+    display: none; } }
+/******** small tablet & smart phone ********/
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  #wrapper {
+    width: 100%; }
+
+  .project-name {
+    font-size: 2em;
+    margin: 10px 0; }
+
+  #nav {
+    display: none; } }
+/******** small phone ********/
+@media screen and (max-width: 479px) {
+  #wrapper {
+    width: 100%; }
+
+  .project-name {
+    font-size: 1.75em;
+    margin: 12px 0; }
+
+  #nav {
+    display: none; } }
+/****************************************
+Styles
+****************************************/
+@viewport {
+  width: device-width; }
+
+/* Uses the device width as the viewport width, this makes content appear at the correct zoom level on smaller devices.*/
+@-ms-viewport {
+      width: device-width; }
+
+/*microsoft version*/
+body {
+  font-size: 100%;
+  margin: 0; }
+
+#wrapper {
+  background-color: #ecf0f1; }
+
+a {
+  color: blue;
+  text-decoration: none; }
+  a:hover {
+    text-decoration: underline; }
+
+.header {
+  width: 100%;
+  height: 60px;
+  background-color: #34495e;
+  margin-bottom: 40px;
+  color: white;
+  position: relative; }
+  .header a {
+    color: #d8e0e9; }
+  .header .project-name {
+    padding: 0 3.125%;
+    display: inline-block;
+    text-align: center;
+    position: absolute;
+    right: 0px;
+    top: 0px; }
+    .header .project-name a {
+      color: white; }
+      .header .project-name a:hover {
+        text-decoration: none; }
+  .header .mobile-nav-trigger {
+    margin: 5px 10px;
+    position: absolute;
+    /* Prevents other positioned content becoming relative to the menu icon on mobile views*/ }
+    .header .mobile-nav-trigger:hover {
+      cursor: pointer; }
+
+.content {
+  width: 93.75%;
+  margin: 0 3.125%;
+  margin-bottom: 40px;
+  /*border: $debug;*/ }
+
+.footer {
+  width: 100%;
+  height: 120px;
+  background-color: #34495e;
+  margin-bottom: 40px; }
+
+/********** Responsive image sizing **********/
+.small-image-sizing {
+  width: 25%; }
+
+.medium-image-sizing {
+  width: 62.5%; }
+
+.large-image-sizing {
+  width: 100%; }
+
+.custom-image-sizing {
+  width: 100%;
+  margin: 0 auto; }
+
+/*create your own custom image classes to size and style images*/
+/******************************************
+Plugins - FitVid.js, responsiveslides.js, jPanelMenu
+******************************************/
+/********** FitVid.js  **********/
+.small-video-sizing {
+  width: 25%; }
+
+.medium-video-sizing {
+  width: 62.5%; }
+
+.large-video-sizing {
+  width: 100%; }
+
+.custom-video-sizing {
+  width: 100%;
+  margin: 0 auto; }
+
+/*create your own custom video classes to size and style videos*/
+/********** responsiveslides.js **********/
+.rslides {
+  position: relative;
+  list-style: none;
+  overflow: hidden;
+  width: 100%;
+  padding: 0;
+  margin: 0; }
+
+.rslides li {
+  -webkit-backface-visibility: hidden;
+  position: absolute;
+  display: none;
+  width: 100%;
+  left: 0;
+  top: 0; }
+
+.rslides li:first-child {
+  position: relative;
+  display: block;
+  float: left; }
+
+.rslides img {
+  display: block;
+  height: auto;
+  float: left;
+  width: 100%;
+  border: 0; }
+
+.small-slider-sizing {
+  width: 25%; }
+
+.large-slider-sizing {
+  width: 62.5%; }
+
+.medium-slider-sizing {
+  width: 100%; }
+
+.custom-slider-sizing {
+  width: 100%;
+  margin: 0 auto; }
+
+/*create your own custom slider classes to size and style sliders*/
+/************ jPanelMenu ************/
+#jPanelMenu-menu {
+  overflow-y: hidden !important;
+  margin-top: 0px;
+  background-color: #3b3b3b;
+  /*if not specified, inherits background-color from the body*/
+  font-size: 1.1em;
+  padding: 0px; }
+  #jPanelMenu-menu li {
+    list-style-type: none; }
+    #jPanelMenu-menu li a {
+      padding: 15px 90% 15px 10%;
+      display: block;
+      color: white;
+      text-decoration: none;
+      border-top: 1px solid #484848;
+      border-bottom: 1px solid #2e2e2e;
+      background: -o-linear-gradient(top, #3e3e3e, #383838);
+      background: -ms-linear-gradient(top, #3e3e3e, #383838);
+      background: -moz-linear-gradient(top, #3e3e3e, #383838);
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #3e3e3e), color-stop(1, #383838));
+      background: -webkit-linear-gradient(#3e3e3e, #383838);
+      background: linear-gradient(top, #3e3e3e, #383838); }
+      #jPanelMenu-menu li a:hover {
+        background: #404040; }
+
+/********* fork on Github banner, feel free to delete **********/
+.fork-on-github {
+  display: none; }
+
+@media screen and (min-width: 1350px) {
+  .fork-on-github {
+    display: block; }
+    .fork-on-github img {
+      position: absolute;
+      top: 0;
+      right: 0;
+      border: 0; } }
