@@ -1,7 +1,7 @@
 # Specifies the pages content type and character set. 
 AddType 'text/html; charset=utf-8' html
 
-# Content encoding gzip compresses files before sending to client
+# Content encoding gzip compresses text files before sending to client
 <ifModule mod_deflate.c>
   AddOutputFilterByType DEFLATE text/plain
   AddOutputFilterByType DEFLATE text/html
@@ -25,6 +25,7 @@ AddType 'text/html; charset=utf-8' html
   BrowserMatch ^Mozilla/4\.0[678] no-gzip
   BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
   Header append Vary User-Agent
+
 </ifModule>
 
 # Enable Apache's mod_headers and mod-expires modules if not already enabled on your server. Terminal commands = "sudo a2enmod expires" & "sudo a2enmod headers". Etags provide a fingerprint service that notifies the browser if cached content has changed.

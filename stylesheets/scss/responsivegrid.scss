@@ -23,7 +23,7 @@ Paypal donations and contract work will be greatly received
 	box-sizing: border-box; 
 }
 
-/* This project has been built WITHOUT fLOATS, floats remove an element from the flow of the page. Therefore i believe display:inline-block is a better alternative in a grid system. Inline-blocks have their issues too, they are WHITESPACE AWARE in html and you may need to vertically align elements. See designshack.net/articles/css/whats-the-deal-with-display-inline-block (floats are still useful for making text flow around images)
+/* This project has been built WITHOUT fLOATS, floats remove an element from the flow of the page. Therefore i believe display:inline-block is a better alternative in a grid system. Inline-blocks have their issues too, they are WHITESPACE AWARE in html and you may need to vertically align elements. See designshack.net/articles/css/whats-the-deal-with-display-inline-block (floats are still useful for making text flow around images, divs, etc)
  */
 
 /***************************************
@@ -299,7 +299,7 @@ Plugins - FitVid.js, responsiveslides.js, jPanelMenu
 	li{
 		list-style-type: none; 
 		a{ 
-			padding: 15px 90% 15px 10%;
+			padding: 15px 10% 15px 10%;
 			display: block;
 			color: white;
 			text-decoration: none;

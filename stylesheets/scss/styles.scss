@@ -6,6 +6,8 @@ Add your main styles here, conventional CSS, SCSS or SASS syntax. To learn more 
 /******** variables imported from the _variable partial in the scss directory *********/
 @import "variables";
 
+/******** main styles ********/
+
 /******** desktop view 1000px plus ********/
 @media screen and (min-width: 1000px){
 
